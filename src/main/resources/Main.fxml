@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workshopshowcasetool.MainController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workshopshowcasetool.MainController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -48,6 +52,12 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <Button fx:id="uploadImgBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onUploadImgClicked" text="Upload image" textAlignment="CENTER" />
+         <Label fx:id="fileNameLabel" layoutX="14.0" layoutY="39.0" prefHeight="17.0" prefWidth="91.0" text="No file selected" />
+         <ImageView fx:id="previewImageview" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" />
+         <Button fx:id="startBtn" layoutX="548.0" layoutY="336.0" mnemonicParsing="false" onAction="#onStartClicked" text="Start slicing" />
+         <TextField fx:id="imageNameTxt" layoutX="477.0" layoutY="304.0" promptText="Enter image name" />
+        </AnchorPane>
     </children>
 </VBox>
